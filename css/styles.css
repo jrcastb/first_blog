@@ -1,0 +1,194 @@
+@font-face {
+    font-family: 'autour_oneregular';
+    src: url('autourone-regular.woff2') format('woff2'),
+         url('autourone-regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+/*Borderbox para los padding y margin*/
+html{
+    box-sizing: border-box;
+}
+*, *:before, *:after{
+    box-sizing: inherit;
+}
+*{/*Resetear los margenes*/
+    margin: 0;
+    padding: 0;
+}
+body{
+    font-family: 'autour_oneregular', Verdana, Geneva, Tahoma, sans-serif;
+    background: lightgoldenrodyellow;
+}
+header{
+    padding: 20px 0;
+}
+div.contenedor{
+    width: 1200px;
+    margin: 0 auto;
+}
+/*Navegacion*/
+.navegacion{
+    background-color: #0E343C;
+   /* position: fixed;
+    width: 100%;*/
+}
+nav{/*padre*/
+    width: 1200px;
+    margin: 0 auto;
+    position: relative;
+}
+nav ul{
+    list-style: none;
+}
+nav > ul > li{/*primer nivel de ul - primer nivel de li*/
+    float: left;
+}
+nav ul:after{/*hijo limpiar el float*/
+    content: '';
+    display: block;
+    clear: both;
+}
+nav ul li a{/*inline block para escoger dimensiones*/
+    display: inline-block;
+    width: 200px;
+    color: #ffffff;
+    text-decoration: none;
+    text-align: center;
+    padding: 20px
+}
+nav ul li a:hover{
+    background-color: #21BF85;
+}
+/*segundo nivel*/
+nav ul ul{
+    position: absolute;
+    top: 100%;
+    background-color: rgba(33, 191, 133, .7);
+    display: none;
+}
+nav ul li:hover > ul{
+    display: block;
+}
+nav ul li:hover{
+    background-color: rgba(33, 191, 133, .7);
+}
+/*Contenido principal*/
+div.contenido:after{/*padre para limpiar el float*/
+    content: '';
+    display: block;
+    clear: both;
+}
+main{
+    width: 70%;
+    float: left;
+    padding-right: 40px;
+    
+}
+/*sidebar*/
+aside{
+    float: right;
+    width: 30%;
+    margin-top: 30px;
+}
+aside ul{
+    list-style: none;
+}
+aside ul li{
+    padding: 10px 0 10px 10px;
+}
+aside ul li:hover{
+    background-color: #21BF85;
+    cursor: pointer;
+}
+aside ul li a{
+    text-decoration: none;
+    color: #0E343C;
+}
+aside ul li a:visited{
+    color: #0E343C;
+}
+/*cuidado con el orden visited before hover*/
+aside ul li:hover a{
+    color: #ffffff;
+}
+/*Entradas de post*/
+article{
+    margin-top: 30px;
+}
+article img{
+    float: left;
+    width: 300px;
+    margin-right: 30px;
+}
+article p{
+    line-height: 2;
+    text-align: justify;
+}
+.boton{
+    background-color: #21BF85;
+    padding: 10px 30px;
+    display: inline-block;
+    margin-top: 10px;
+    font-weight: bold;
+    text-transform: uppercase;
+    text-decoration: none;
+    color: #0E343C;
+}
+.boton:visited{
+    color: #0E343C;
+}
+.boton:hover{
+    color: #ffffff;
+}
+h2{
+    color: #21BF85;
+    margin-bottom: 20px;
+    font-size: 30px;
+}
+img#youtube, #instagram, #facebook, #twitter{
+    width: 30px;
+}
+/*footer*/
+footer{
+    background-color: #0E343C;
+    color: #ffffff;
+    margin-top: 30px;
+    padding-top: 40px;
+}
+footer p{
+    padding-bottom: 20px;
+    text-align: justify;
+}
+footer h2{
+    color: #ffffff;
+}
+footer p.copyright{
+    margin-top: 30px;
+    text-align: center;
+}
+footer div.contenedor::after{
+    content: '';
+    display: block;
+    clear: both;
+}
+footer div.nosotros{
+    float:left;
+    width: 30%;
+    margin-right: 30px;
+}
+footer div.menu{
+    float: right;
+    width: 50%;
+    text-align: right;
+}
+footer nav{
+    width: auto;
+}
+footer nav ul li a{
+    width: auto;
+}
+p{
+    font-size: 15px;
+}
